@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Syntax check
+        run: python -m py_compile rdp_builder.py
+      - name: Builder smoke test
+        run: |
+          python rdp_builder.py --host 100.101.102.103 --user demo --rdp-file demo.rdp
+          grep -q "enablecredsspsupport:i:1" demo.rdp
+          grep -q "full address:s:100.101.102.103:3389" demo.rdp
+          echo "smoke test passed"
