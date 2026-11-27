@@ -7,8 +7,6 @@ Remote Desktop Protocol client (Apache 2.0, by the FreeRDP project).
 > This repo is **not** the FreeRDP project and is not affiliated with it.
 > It is a personal toolkit *around* the client: a connection builder with
 > secure defaults, and a checklist for not getting your RDP hacked.
-> It previously held a GitHub Actions "free RDP" workflow; that was
-> removed deliberately — see the checklist for why.
 
 ## What's here
 
