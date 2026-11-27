@@ -52,6 +52,5 @@ Workflows that turn a CI runner into a temporary remote desktop —
 disabling NLA, opening 3389 to everyone, printing an admin password in
 the log, and looping to keep the runner alive — break the host
 platform's terms of service and can get the account banned, on top of
-being genuinely insecure. This repo used to contain one; it was removed
-on purpose. If you need a Windows desktop, use a machine or VM you own
+being genuinely insecure. If you need a Windows desktop, use a machine or VM you own
 and connect to it the way this checklist describes.
